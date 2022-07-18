@@ -14,8 +14,7 @@ let todoLists = JSON.parse(localStorage.getItem('todolists'))
 
 if (todoLists) {
     arr = todoLists
-    
-    removeDisplay()
+    insertLists()
 }
 
 saveBtn.addEventListener('click', () => {
@@ -34,7 +33,6 @@ clearBtn.addEventListener('click', () => {
     localStorage.clear()
     arr.splice(0, arr.length)
     insertLists()
-    removeDisplay()
 })
 
 list.addEventListener('click', e => {
@@ -59,7 +57,7 @@ list.addEventListener('click', e => {
         
         todoLists.splice(findLocalArrayIndex, 1)
         localStorage.setItem('todolists', JSON.stringify(todoLists))
-        removeDisplay()
+   
     }
     e.stopPropagation()
 })
@@ -96,7 +94,6 @@ function insertLists() {
 function removeDisplay(){
     if(arr.length != 0 || todoLists.length != 0){
         list.style.display = "block"
-        insertLists()
     } else {
         console.log('display none')
         list.style.display = "none"
