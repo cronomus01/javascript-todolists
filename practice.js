@@ -96,6 +96,7 @@ function insertLists() {
 function removeDisplay(){
     if(arr.length != 0 || todoLists.length != 0){
         list.style.display = "block"
+        insertLists()
     } else {
         console.log('display none')
         list.style.display = "none"
