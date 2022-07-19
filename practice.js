@@ -5,6 +5,7 @@ const getInput = document.querySelector('.todolist__input')
 const mainCon = document.querySelector('.todolist')
 const list = document.createElement('ul')
 list.setAttribute('class', 'todolist__list')
+list.innerHTML = null
 mainCon.appendChild(list)
 let arr = []
 
@@ -15,6 +16,10 @@ let todoLists = JSON.parse(localStorage.getItem('todolists'))
 if (todoLists) {
     arr = todoLists
     insertLists()
+<<<<<<< Updated upstream
+=======
+    removeDisplay()
+>>>>>>> Stashed changes
 }
 
 saveBtn.addEventListener('click', () => {
@@ -92,10 +97,15 @@ function insertLists() {
 
 
 function removeDisplay(){
-    if(arr.length != 0 || todoLists.length != 0){
+    if(todoLists.length != 0){
         list.style.display = "block"
     } else {
         console.log('display none')
         list.style.display = "none"
     }
 }
+<<<<<<< Updated upstream
+=======
+
+console.log(list)
+>>>>>>> Stashed changes
