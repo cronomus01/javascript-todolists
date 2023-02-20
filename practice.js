@@ -16,10 +16,7 @@ let todoLists = JSON.parse(localStorage.getItem('todolists'))
 if (todoLists) {
     arr = todoLists
     insertLists()
-<<<<<<< Updated upstream
-=======
     removeDisplay()
->>>>>>> Stashed changes
 }
 
 saveBtn.addEventListener('click', () => {
@@ -104,8 +101,4 @@ function removeDisplay(){
         list.style.display = "none"
     }
 }
-<<<<<<< Updated upstream
-=======
-
 console.log(list)
->>>>>>> Stashed changes
